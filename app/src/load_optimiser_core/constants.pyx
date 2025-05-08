@@ -1,4 +1,4 @@
-class RotationType:
+cdef class RotationType:
     RT_WHD = 0
     RT_HWD = 1
     RT_HDW = 2
@@ -9,8 +9,8 @@ class RotationType:
     ALL = [RT_WHD, RT_HWD, RT_HDW, RT_DHW, RT_DWH, RT_WDH]
     # un upright or un updown
     Notupdown = [RT_WHD,RT_HWD]
- 
-class Axis:
+
+cdef class Axis:
     WIDTH = 0
     HEIGHT = 1
     DEPTH = 2

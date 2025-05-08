@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-from src.load_optimiser_core.main import Packer, Item, Bin
+from src.load_optimiser_core import Packer, Bin, Item
 from polars import DataFrame
 import polars as pl
 import numpy as np

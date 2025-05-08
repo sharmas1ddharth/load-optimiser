@@ -2,7 +2,8 @@ from decimal import Decimal
 from .constants import Axis
 
 
-def rectIntersect(item1, item2, x, y):
+cdef bint rectIntersect(item1, item2, x, y):
+    cdef int cx1, cy1, cx2, cy2, ix, iy
     d1 = item1.getDimension()
     d2 = item2.getDimension()
 
@@ -17,7 +18,7 @@ def rectIntersect(item1, item2, x, y):
     return ix < (d1[x]+d2[x])/2 and iy < (d1[y]+d2[y])/2
 
 
-def intersect(item1, item2):
+cpdef bint intersect(item1, item2):
     return (
         rectIntersect(item1, item2, Axis.WIDTH, Axis.HEIGHT) and
         rectIntersect(item1, item2, Axis.HEIGHT, Axis.DEPTH) and
