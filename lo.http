@@ -1,0 +1,74 @@
+# curl --request POST
+#  --url http://localhost:3600/v1/binpacking
+#  --header 'content-type: application/json'
+#  --data '{
+#  "vehicle": [
+#    {
+#      "volume": 49375872,
+#      "quantity": 1,
+#      "vehicleType": "REFRIGERATOR VAN",
+#      "length": 942,
+#      "width": 234,
+#      "height": 224
+#    }
+#  ],
+#  "dispatchPlan": [
+#    {
+#      "shapeType": "Box",
+#      "quantity": "409",
+#      "length": "45",
+#      "width": "45",
+#      "height": "45",
+#      "radius": 0,
+#      "weight": "56",
+#      "volume": 91125
+#    },
+#    {
+#      "shapeType": "Box",
+#      "quantity": "670",
+#      "length": "88",
+#      "width": "88",
+#      "height": "88",
+#      "radius": 0,
+#      "weight": "89",
+#      "volume": 681472
+#    }
+#  ]
+#}'
+POST http://localhost:3600/v1/binpacking
+Content-Type: application/json
+
+{
+  "vehicle": [
+    {
+      "volume": 49375872,
+      "quantity": 1,
+      "binType": "REFRIGERATOR VAN",
+      "length": 942,
+      "width": 234,
+      "height": 224
+    }
+  ],
+  "dispatchPlan": [
+    {
+      "shapeType": "Box",
+      "quantity": "409",
+      "length": "45",
+      "width": "45",
+      "height": "45",
+      "radius": 0,
+      "weight": "56",
+      "volume": 91125
+    },
+    {
+      "shapeType": "Box",
+      "quantity": "670",
+      "length": "88",
+      "width": "88",
+      "height": "88",
+      "radius": 0,
+      "weight": "89",
+      "volume": 681472
+    }
+  ]
+}
